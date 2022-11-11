@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
-import { ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client'
+import { ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client';
 
 
 const client = new ApolloClient({
@@ -16,7 +16,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <Navbar />
+          <Navbar/>
           <Switch>
             <Route exact path='/' component={SearchBooks} />
             <Route exact path='/saved' component={SavedBooks} />
